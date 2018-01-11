@@ -68,11 +68,10 @@ class DATABASE_CONFIG {
         public $default = array(
             'datasource' => 'Database/Mysql',
             'persistent' => false,
-            'host'       => '',
-            'port'       => '',
-            'login'      => '',
-            'password'   => '',
-            'database'   => '',
+            'host'       => 'localhost',
+            'login'      => 'root',
+            'password'   => 'roor',
+            'database'   => 'test',
             'prefix'     => '',
             'encoding' => 'utf8',
         );
@@ -80,11 +79,10 @@ class DATABASE_CONFIG {
         public $test = array(
             'datasource' => 'Database/Mysql',
             'persistent' => false,
-            'host'       => '',
-            'port'       => '',
-            'login'      => '',
-            'password'   => '',
-            'database'   => 'test_database',
+            'host'       => 'localhost',
+            'login'      => 'root',
+            'password'   => 'root',
+            'database'   => 'test',
             'prefix'     => '',
             'encoding' => 'utf8',
         );
@@ -99,6 +97,6 @@ class DATABASE_CONFIG {
         $this->default['password']   = getenv("DATABASE_PASSWORD");
         $this->default['database']   = getenv("DATABASE_NAME");
         $this->default['datasource'] = $datasource;
-        $this->test['datasource']    = $datasource;
+       $this->test['datasource']    = $datasource;
 	}
 }
